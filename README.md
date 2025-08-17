@@ -44,6 +44,8 @@
 | `GH_PAT` | 可选 | GitHub Personal Access Token，用于自动更新Cookie变量 |
 
 > **注意**：若仅设置 Cookie 但未配置验证码服务，当 Cookie 过期后无法自动登录获取新 Cookie。
+> cookie格式如下：
+> session=92defd90cbd54ca4e6458d97b7ae9534; smac=1755438429-ipWOqD2pShClQLABXmVqvrnmMODVfTISAb1eih8-kU4; colorscheme=light; hmti_=1755399478-mx4goKToqFzNCxGvAVpApttiL01E32dj08wMQ7DRYrEv; cf_clearance=evyL579Z9wSV48dvirYSdD2cbZJkv4ApnETEZ.7GLxk-1755438338-1.2.1.1-ceNI.7wZHqwqBWJ6dVAdbF5w06iuBSNuS12rYfEmxuwjfoKNIrIFMdT3G5x9O2yY8W51i3qJSqLOgMShZFKZt2Ng7MEVJspe8DLmbyaeXPIfIpkM0yEwVvRkIBPg0yy_QmFyjcIOHNiSDtV.W5w4SjivtyQk340k8QYe9HHOgwJt4mrKmdQv7yowSRJGqGnhZVn4FxGVtyi7COYn_Ls5LTlPJcSAlBtJPaIa5MXnHnU
 
 ### 方式二：青龙面板
 
