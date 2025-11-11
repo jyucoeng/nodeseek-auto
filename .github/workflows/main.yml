@@ -5,7 +5,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: '31 18 * * *'  # 北京时间 10:31 (UTC+8)，对应UTC时间 18:31
+    - cron: '35 23 * * *'  # 北京时间 10:31 (UTC+8)，对应UTC时间 18:31
   workflow_dispatch:
 
 permissions:
